@@ -1,0 +1,7 @@
+nc: 1
+
+names: ["banknote"]
+
+train: ../data/processed/train/images
+val: ../data/processed/val/images
+test: ../data/processed/test/images
