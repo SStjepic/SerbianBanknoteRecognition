@@ -1,0 +1,18 @@
+{
+  "data": {
+    "train_dir": "./data/processed/cnn/train",
+    "val_dir": "./data/processed/cnn/val",
+    "test_dir": "./data/processed/cnn/test"
+  },
+  "model": {
+    "save_dir": "cnn_model",
+    "weights_file": "serbian_banknote_cnn.pth",
+    "img_size": 256
+  },
+  "classes": ["10", "20", "50", "100", "200", "500", "1000", "2000", "5000"],
+  "training": {
+    "batch_size": 32,
+    "lr": 0.001,
+    "num_epochs": 50
+  }
+}
