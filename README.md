@@ -158,6 +158,9 @@ CNN classifies cropped images based on their denomination.
 
 ![alt text](images/cnn.png)
 
+My SerbianBanknoteCNN model:  
+[Download from Google Drive](https://drive.google.com/file/d/1x5YHipBWls0bkoTCM87uhDsz-ocSAHyc/view?usp=sharing)
+
 ### Config
 
 _configs/cnn_config.json_
