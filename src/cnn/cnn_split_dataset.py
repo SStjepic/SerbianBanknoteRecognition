@@ -8,7 +8,7 @@ dst_dir = "./data/processed/cnn"
 train_dir = os.path.join(dst_dir, "train")
 val_dir   = os.path.join(dst_dir, "val")
 test_dir  = os.path.join(dst_dir, "test")
-
+random.seed(22)
 train_ratio = 0.7
 val_ratio   = 0.15
 test_ratio  = 0.15

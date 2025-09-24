@@ -208,6 +208,7 @@ __marimo__/
 
 data/
 .vscode/
-runs/
-yolov8n.pt
+runs/detect/
+runs/train/serbian_banknotes/*
+!runs/train/serbian_banknotes/weights/
 cnn_model/

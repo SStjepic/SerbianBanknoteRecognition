@@ -32,14 +32,15 @@ SerbianBanknoteRecognition/
 │ │ │ ├── cnn_split_dataset.py
 │ │ │ ├── cnn_test.py
 │ │ │ └── cnn_train.py
+│ │ └── yolo/
+│ │ │ ├── yolo_crop_images.py
+│ │ │ ├── yolo_preprocess.py
+│ │ │ ├── yolo_rename_labels.py
+│ │ │ └── yolo_split_dataset.py
+│ │ │ ├── yolo_test_bb.py
+│ │ │ ├── yolo_test.py
+│ │ │ └── yolo_train.py
 | ├── main.py
-│ ├── preprocess.py
-│ ├── rename_labels.py
-│ ├── split_dataset.py
-│ ├── train_yolo.py
-│ ├── test_yolo.py
-│ ├── test_yolo_bb.py
-| └── yolo_crop_images.py
 ├── README.md
 ├── requirements.txt
 └── yolo8n.pt
@@ -88,7 +89,7 @@ Download the Serbian Banknote dataset and extract files and place them into root
    Run script to resize images to 512x512
 
 ```bash
-    python src/preprocess.py
+    python src/yolo/yolo_preprocess.py
 ```
 
 2. Rename labels (optional)
@@ -96,7 +97,7 @@ Download the Serbian Banknote dataset and extract files and place them into root
    Labels should be in format '10RSD_front_01.txt'
 
 ```bash
-    python src/rename_labels.py
+    python src/yolo/yolo_rename_labels.py
 ```
 
 3. Split the dataset into train/val/test
@@ -104,7 +105,7 @@ Download the Serbian Banknote dataset and extract files and place them into root
    Run this script to split dataset into train/val/test 70/15/15
 
 ```bash
-    python src/split_dataset.py
+    python src/yolo/yolo_split_dataset.py
 ```
 
 ## YOLOv8
@@ -132,7 +133,7 @@ _configs/data.yaml_
 To start training run this command
 
 ```bash
-    python src/train_yolo.py
+    python src/yolo/yolo_train.py
 ```
 
 Results will be saved in runs/ folder.
@@ -142,13 +143,13 @@ Results will be saved in runs/ folder.
 Run this script to get YOLOv8 model metrics:
 
 ```bash
-    python src/test_yolo.py
+    python src/yolo/yolo_test.py
 ```
 
 Run this script to test YOLOv8 model with bounding box visualization
 
 ```bash
-    python src/test_yolo_bb.py
+    python src/yolo/yolo_test_bb.py
 ```
 
 ## CNN -> SerbianBanknoteCNN
